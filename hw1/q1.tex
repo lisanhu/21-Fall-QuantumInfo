@@ -1,0 +1,34 @@
+%!TEX root = main.tex
+\section*{Problem 1}
+
+\begin{note}{Define}
+    \begin{list}{}{}
+        \item $Cov =$ Getting COVID
+        \item $DF =$ Disease Free
+        \item $+ =$ Test positive
+        \item $- =$ Test negative
+    \end{list}
+\end{note}
+
+\noindent From the question, we learned
+\begin{list}{}{}
+    \item $Sensitivity = P(+|Cov)$
+    \item $Specificity = P(-|DF)$
+\end{list}
+
+\begin{enumerate}[label=\alph*)]
+    \item $P(Cov)=0.5\%$
+    \item $P(Cov)=5\%$
+\end{enumerate}
+
+\noindent We want $P(Cov|+)$ for bose cases.
+
+\begin{align*}
+    P(Cov|+) &= \frac{P(+|Cov)\cdot P(Cov)}{P(+)} \\
+                &= \frac{P(+|Cov)\cdot P(Cov)}{P(+|Cov)\cdot P(Cov) + P(+|DF)\cdot P(DF)} \\
+                &= \frac{Sensitivity\cdot P(Cov)}{Sensitivity\cdot P(Cov) + (1-Specificity)\cdot (1-P(Cov))}
+\end{align*}
+
+For \textit{a)} $$P(Cov|+) = \frac{0.65\times 0.005}{0.65\times 0.005 + 0.01\times 0.995} = \frac{65}{264} \approx 0.246 = 24.6\%$$
+
+For \textit{b)} $$P(Cov|+) = \frac{0.65\times 0.05}{0.65\times 0.05 + 0.01\times 0.95} = \frac{65}{84} \approx 0.774 = 77.4\% $$
