@@ -1,6 +1,3 @@
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
 So far, information is a function of probabilities.
 
 Today:
@@ -123,7 +120,7 @@ Quantum rules for adding probability and amplitudes (vs. classical world's addin
 - ONLY apply when the system is informationally isolated.
 - if scramble again then the interference come back
 
-informationally isolated $\Rightarrow $ produces no record anywhere in the universe
+informationally isolated $\Rightarrow$ produces no record anywhere in the universe
 
 Weirdness of Quantum theory is bacause this probabilistic behavior is inherent/fundamental 
 
