@@ -1,2 +1,46 @@
 %!TEX root = main.tex
 \section*{Problem 2}
+
+\begin{note}{a)}
+number of bits needed for keyboard symbols:
+8bits
+
+2615 characters
+total size = 2615 bytes 
+
+ls -alF shows
+2659 bytes
+
+not all characters on the keyboard, unicode resulting in this
+\end{note}
+
+\begin{note}{b)}
+$\\
+1 byte = 2^3 bits \\
+1KiB = 2^13 bits \\
+1MiB = 2^23 bits \\
+1GiB = 2^33 bits \\
+$
+$\\
+1 byte = 8 bits \\
+1KB = 8\times 10^3 bits \\
+1MB = 8\times 10^6 bits \\
+1GB = 8\times 10^9 bits $
+\end{note}
+
+\begin{note}{c)}
+$\\
+80GB = 8 \times 10^9 bytes \\
+\text{number of pages} = 8\times 10^9 / 2659 \approx 3008649.868 \approx 3008650$
+\end{note}
+
+\begin{note}{d)}
+it means our information reduces 1GB $= 8\times 10^9 bits$
+$\\
+\Delta S = (k_Bln2)\times 8\times 10^9 \\
+\therefore Q=T\cdot\Delta S = 300 \times k_B \times ln 2 \times 8 \times 10^9 = 300 \times 1.38 \times 10^{-23} \times ln 2 \times 8 \times 10^9 J \approx 2.87\times 10^{-12}$
+\end{note}
+
+\begin{note}{e)}
+We need $80 \times 2.87 \times 10^{-12} \approx 2.30 \times 10^{-10} J$
+\end{note}

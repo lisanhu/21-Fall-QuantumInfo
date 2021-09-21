@@ -1,0 +1,51 @@
+%!TEX root = main.tex
+\section*{Problem 3}
+
+\begin{note}{a)}
+    \begin{align*}
+        H(X, Y) &= -\sum_{i, j} P(X_i, Y_j)logP(X_i, Y_j) \\
+                &= -\sum_{i, j} P(Y_j, X_i)logP(Y_j, X_i) \\
+                &= H(Y, X) \\
+        H(X: Y) &= H(X) + H(Y) - H(X, Y) \\
+                &= H(Y) + H(X) - H(Y, X) \\
+                &= H(Y: X)
+    \end{align*}
+\end{note}
+
+\begin{note}{b)}
+    It's obvious the information of any event $\geq 0$, $H(Y|X)$ is always true
+    \begin{align*}
+        H(X:Y) = H(Y) + H(X) - H(X,Y) \\
+    \end{align*}
+    \begin{align*}
+        \because H(X) - H(X, Y) &= -\sum_{i}P(X_i)logP(X_i) + \sum_{i, j}P(Y_j|X_i)P(X_i)log(P(Y_j|X_i)P(X_i)) \\
+        &= \sum_i P(X_i)\sum_j (P(Y_j|X_i)log(P(Y_j|X_i)P(X_i)) - log(P(X_i))) \\
+    \end{align*}
+    \begin{align*}
+        &\because P(Y_j|X_i)\leq 1 \\
+        &\therefore P(Y_j|X_i)log(P(Y_j|X_i)P(X_i)) \leq log(P(Y_j|X_i)P(X_i))\leq log(P(X_i)) \\
+        &\therefore \sum_i P(X_i)\sum_j (P(Y_j|X_i)log(P(Y_j|X_i)P(X_i)) - log(P(X_i))) \leq 0 \\
+        &\therefore H(X) \leq H(X, Y)
+    \end{align*}
+    Meanwhile, 
+    \begin{align*}
+        &P(Y_j|X_i)log(P(Y_j|X_i)P(X_i)) = log(P(Y_j|X_i)P(X_i))= log(P(X_i)) \\
+        &\iff P(Y_j|X_i) = 1 \\
+        &\iff Y=f(X)
+    \end{align*}
+\end{note}
+
+\begin{note}{c)}
+    \begin{align*}
+        &H(X, Y) = H(X) + H(Y) - H(X: Y) \\
+        &\because H(X:Y) \geq 0 \\
+        &\therefore H(X, Y) \leq H(X) + H(Y)
+    \end{align*}
+    When equality, 
+    \begin{align*}
+        &H(X:Y)=0 \\ 
+        &\iff log(\frac{P(X, Y)}{P(X)P(Y)}) = 1 \\
+        &\iff P(X, Y) = P(X)P(Y) \\
+        &\iff \text{X and Y are independent}
+    \end{align*}
+\end{note}
