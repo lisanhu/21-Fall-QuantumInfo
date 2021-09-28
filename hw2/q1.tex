@@ -1,0 +1,62 @@
+%!TEX root = main.tex
+\section*{Problem 1}
+\subsection*{a)}
+\begin{align*}
+|\psi\rangle^2 &= |\langle \psi|\psi\rangle| \\
+&= \begin{bmatrix}
+        \cos\theta & \sin\theta
+    \end{bmatrix} 
+    \begin{bmatrix}
+        \cos\theta \\
+        \sin\theta
+    \end{bmatrix} \\
+    &= \cos^2\theta + \sin^2\theta = 1 \\
+\end{align*}
+$\therefore |\psi\rangle$ is normalized.
+
+\subsection*{b)}
+Probability of $|0\rangle$ is $\cos^2\theta$. Probability of $|1\rangle$ is $\sin^2\theta$
+
+\subsection*{c)}
+Guess it's $\cos^2(\theta - \frac{\pi}{4})$ and $\sin^2(\theta - \frac{\pi}{4})$
+
+\begin{align*}
+    \langle+|\psi\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \cos\theta \\
+        \sin\theta
+    \end{bmatrix} = \frac{1}{\sqrt{2}}(\sin\theta + \cos\theta)
+    = \cos(\theta - \frac{\pi}{4})
+\end{align*}
+\begin{align*}
+    \langle-|\psi\rangle &= \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        \cos\theta \\
+        \sin\theta
+    \end{bmatrix} = \frac{1}{\sqrt{2}}(\sin\theta - \cos\theta)
+    = \sin(\theta - \frac{\pi}{4})
+\end{align*}
+$\therefore$ the probability to get $|+\rangle$ is $\cos^2(\theta - \frac{\pi}{4})$, and the probability to get $|-\rangle$ is $\sin^2(\theta - \frac{\pi}{4})$
+
+\subsection*{d)}
+\begin{align*}
+    \mathcal{H}\cdot|\psi\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1 & 1 \\
+        1 & -1
+    \end{bmatrix}\cdot\begin{bmatrix}
+        \cos\theta \\
+        \sin\theta
+    \end{bmatrix}
+    = \frac{1}{\sqrt{2}}\begin{bmatrix}
+        \cos\theta + \sin\theta \\
+        \cos\theta - \sin\theta
+    \end{bmatrix}
+    = \begin{bmatrix}
+        \cos(\theta - \frac{\pi}{4}) \\
+        \sin(\theta - \frac{\pi}{4})
+    \end{bmatrix}
+\end{align*}

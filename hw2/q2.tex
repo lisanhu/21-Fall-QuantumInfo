@@ -1,0 +1,52 @@
+%!TEX root = main.tex
+\section*{Problem 2}
+\subsection*{a)}
+Possible outcomes for each round: $\{|0\rangle, |1\rangle\} $ \\
+
+\begin{note}{Define} $|\chi_0\rangle$ is the guessing state when the outcome is $|0\rangle$, and $|\chi_1\rangle$ is the guessing state when the outcome is $|1\rangle$
+\end{note}
+\begin{align*}
+    |\chi_0\rangle = \begin{bmatrix}
+        1 \\ 
+        0
+    \end{bmatrix} \\
+    |\chi_1\rangle = \begin{bmatrix}
+        0 \\
+        1
+    \end{bmatrix}
+\end{align*}
+
+\subsection*{b)}
+\begin{note}{Define}
+$F_0$ is the fidelity when the outcome is $|0\rangle$, and $F_1$ is the fidelity when the outcome is $|1\rangle$
+\end{note}
+
+\begin{align*}
+    F_0 &= |\langle\psi|\chi_0\rangle|^2
+    = |\begin{bmatrix}
+        \cos\theta & e^{i\Phi}\sin\theta
+    \end{bmatrix}\cdot
+    \begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix}
+    |^2 = \cos^2\theta \\
+    F_1 &= |\langle\psi|\chi_1\rangle|^2
+    = |\begin{bmatrix}
+        \cos\theta & e^{i\Phi}\sin\theta
+    \end{bmatrix}\cdot
+    \begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix}
+    |^2 = e^{2i\Phi}sin^2\theta
+\end{align*}
+
+\subsection*{c)}
+Probability $p_0$ on $\chi_0$ is $\cos^2\theta$\\
+Probability $p_1$ on $\chi_1$ is $\sin^2\theta$\\
+Average fidelity is
+\begin{align*}
+    p_0\cdot F_0 + p_1\cdot F_1 = \cos^4\theta + e^{2i\Phi}\sin^4\theta
+\end{align*}
+
+\subsection*{d)}
+The average fidelity is $\int\int(\cos^4\theta + e^{2i\Phi}\sin^4\theta) d\theta d\Phi$
