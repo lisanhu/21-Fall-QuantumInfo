@@ -37,7 +37,7 @@ $F_0$ is the fidelity when the outcome is $|0\rangle$, and $F_1$ is the fidelity
     \begin{bmatrix}
         0 \\ 1
     \end{bmatrix}
-    |^2 = e^{2i\Phi}sin^2\theta
+    |^2 = \sin^2\theta
 \end{align*}
 
 \subsection*{c)}
@@ -45,8 +45,20 @@ Probability $p_0$ on $\chi_0$ is $\cos^2\theta$\\
 Probability $p_1$ on $\chi_1$ is $\sin^2\theta$\\
 Average fidelity is
 \begin{align*}
-    p_0\cdot F_0 + p_1\cdot F_1 = \cos^4\theta + e^{2i\Phi}\sin^4\theta
+    p_0\cdot F_0 + p_1\cdot F_1 = \cos^4\theta + \sin^4\theta
 \end{align*}
 
 \subsection*{d)}
-The average fidelity is $\int\int(\cos^4\theta + e^{2i\Phi}\sin^4\theta) d\theta d\Phi$
+The average fidelity is $\int(\cos^4\theta + \sin^4\theta) d\theta $
+\begin{align*}
+     &\int_0^\pi(\cos^4\theta + \sin^4\theta)d\theta \\
+    =&\int_0^\pi\cos^4\theta d\theta + \int_0^\pi\sin^4\theta d\theta \\
+    =&\int_0^\pi(\frac{\cos2\theta + 1}{2})^2d\theta + \int_0^\pi(\frac{1 - \cos2\theta}{2})^2d\theta \\
+    =&\int_0^\pi(\frac{1}{4}\cos^22\theta + \frac{1}{2}\cos2\theta + \frac{1}{4})d\theta
+    + \int_0^\pi(\frac{1}{4}\cos^22\theta - \frac{1}{2}\cos2\theta + \frac{1}{4})d\theta \\
+    =&\int_0^\pi(\frac{1}{8}\cos4\theta + \frac{1}{8} + \frac{1}{2}\cos2\theta + \frac{1}{4})d\theta 
+    + \int_0^\pi(\frac{1}{8}\cos4\theta + \frac{1}{8} - \frac{1}{2}\cos2\theta + \frac{1}{4})d\theta \\
+    =&(\frac{1}{32}\sin4\theta + \frac{1}{4}\sin2\theta + \frac{3}{8}\theta)\bigg|_0^\pi
+    + (\frac{1}{32}\sin4\theta - \frac{1}{4}\sin2\theta + \frac{3}{8}\theta)\bigg|_0^\pi \\
+    =&\frac{3}{4}\pi
+\end{align*}
